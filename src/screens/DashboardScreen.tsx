@@ -5,7 +5,6 @@ import {
   FlatList,
   Image,
   ActivityIndicator,
-  Touchable,
   TouchableOpacity,
 } from 'react-native';
 import styles from '../styles/globalStyles';
@@ -54,9 +53,16 @@ export default function DashboardScreen() {
                   flexDirection: 'row',
                   alignItems: 'center',
                   padding: 10,
-
-                  borderBottomWidth: 1,
-                  borderBottomColor: '#ddd',
+                  margin: 5,
+                  borderWidth: 1,
+                  borderColor: 'grey',
+                  borderRadius: 12,
+                  shadowColor: '#000',
+                  shadowOpacity: 0.2,
+                  shadowOffset: {
+                    width: 0,
+                    height: 2,
+                  },
                 }}
               >
                 <Image
@@ -76,7 +82,7 @@ export default function DashboardScreen() {
                     marginRight: 10,
                   }}
                 />
-                <View>
+                <View style={{ flex: 1 }}>
                   <Text style={{ fontWeight: 'bold' }}>{item.title}</Text>
                   <Text>{item.url}</Text>
                 </View>
